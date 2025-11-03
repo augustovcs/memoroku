@@ -6,8 +6,12 @@ public class SupaDB : DbContext
 {
     public SupaDB(DbContextOptions<SupaDB> options) : base(options)
     {
-        
     }
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<DataCard>().ToTable("daily_card", schema: "data");
+    }
+
     
     public DbSet<DataCard> DataCards { get; set; }
     

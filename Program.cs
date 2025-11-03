@@ -1,4 +1,5 @@
 using Memoroku.Models;
+using Memoroku.Services;
 using Memoroku.Util;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,6 +15,8 @@ builder.Services.AddControllers();
 
 builder.Services.AddDbContext<SupaDB>(options => options.UseNpgsql(conn));
 
+builder.Services.AddScoped<TestUseful>();
+
 var app = builder.Build();
 
 
@@ -26,5 +29,6 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.MapControllers();
 app.Run();
 
