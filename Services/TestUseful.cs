@@ -21,4 +21,24 @@ public class TestUseful
         return row;
     }
 
+    public async Task<bool> CreateDataFlashTest(DataFlash data)
+    {
+        var flash = await _context.DataCards
+            .AnyAsync(p => p.Id == data.CardId);
+
+        if (!flash)
+        {
+            return false;
+        }
+        
+        data.Id = Guid.NewGuid();
+        data.CreatedAt = DateTime.UtcNow;
+
+        _context.DataFlashes.Add(data);
+        await _context.SaveChangesAsync();
+        
+        return true;
+
+    }
+
 }

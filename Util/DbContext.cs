@@ -10,9 +10,11 @@ public class SupaDB : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<DataCard>().ToTable("daily_card", schema: "data");
+        modelBuilder.Entity<DataFlash>().ToTable("flash_list", schema: "data");
     }
 
     
     public DbSet<DataCard> DataCards { get; set; }
+    public DbSet<DataFlash> DataFlashes { get; set; }
     
 }
