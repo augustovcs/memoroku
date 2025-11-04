@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Memoroku")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1b54615acf76aecefbae0f3f1fa429c766f3e987")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cb91cca3f73988ac5fc7fa89d0707de1a64431d6")]
 [assembly: System.Reflection.AssemblyProductAttribute("Memoroku")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Memoroku")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

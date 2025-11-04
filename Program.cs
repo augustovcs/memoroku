@@ -16,6 +16,7 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<SupaDB>(options => options.UseNpgsql(conn));
 
 builder.Services.AddScoped<TestUseful>();
+builder.Services.AddScoped<FlashService>();
 
 var app = builder.Build();
 
